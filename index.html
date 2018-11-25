@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<title>Calculating π using Monte Carlo</title>
+		<style>
+			canvas {
+				border: 1px solid black;
+				margin: auto;
+				display: block;
+			}
+			#stats {
+				float: right;
+			}
+			#results {
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='stats'>
+			<div id='results'>
+				<p>ρ = { rho }</p>
+				<p>π = { pi }</p>
+			</div>
+			<div id='config'>
+				<p>sampleSize = { sampleSize }</p>
+				<input rv-value='sampleSize' rv-on-change='run' type='range' min='10' max='400000' step='100'>
+			</div>
+		</div>
+		<canvas width='800' height='800'></canvas>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js'></script>
+		<script src='./index.js'></script>
+	</body>
+</html>
