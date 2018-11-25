@@ -3,6 +3,7 @@ const W = canvas.width, H = canvas.height;
 const ctx = canvas.getContext('2d');
 
 const RADIUS = W;
+
 const config = {
 	sampleSize: 100000,
 };
@@ -18,7 +19,7 @@ function isInsideCircle(x, y) {
 function drawPoint(x, y) {
 	ctx.save();
 	ctx.fillStyle = isInsideCircle(x, y) ? 'green' : 'red';
-	ctx.fillRect(x, y, 2, 2);
+	ctx.fillRect(x, y, 1, 1);
 	ctx.restore();
 }
 
